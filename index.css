@@ -1,0 +1,242 @@
+:root {
+    --couleur-fond1: #bc2020;
+    --couleur-fond2: #6b0202;
+    --couleur-ecriture1: #4c9346;
+    --couleur-ecriture2: rgb(248, 252, 250);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-align: justify;
+    font-size: 20px;
+}
+
+*{
+    font-family : 'Roboto', 'sans serif';
+    text-decoration: none;
+}
+h1, h3, .logo {
+    font-family: 'Pacifico', cursive;
+}
+
+  
+h2{
+    text-align: center;
+}
+
+button {
+    border-radius: 30px;
+    border: 1px solid black;
+    height: 50px;
+    width: 250px;
+    background-color: var(--couleur-fond1);
+    font-size: 22px;
+    color: var(--couleur-ecriture2);
+    transition: all 0.4s ease 0s;
+}
+
+button:hover {
+    background-color: var(--couleur-fond2);
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
+
+nav,
+#services,
+footer {
+    background-color: var(--couleur-fond1);
+    color : var(--couleur-ecriture2);
+}
+h3, h1 {
+    text-align: center;
+}
+
+section{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+/*barre de navigation*/
+
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 4;
+    align-items: center;
+    justify-content: space-between;
+    padding : 0 5%;
+}
+
+.logo{
+    color : var(--couleur-ecriture2);
+}
+.navbar{
+    display:flex;
+    justify-content: flex-end;
+}
+.navbar a {
+    color : var(--couleur-ecriture2);
+    margin-left: 30%;
+    border: 0px solid transparent;   
+}
+
+/*header*/
+header {
+    width: 100%;
+    margin-top: 80px;
+    color : var(--couleur-ecriture2);
+    display : flex;
+}
+
+header img {
+    object-fit: cover;
+    height: 50vh;
+    width : 100vw;
+}
+
+h1{
+    position: absolute;
+    
+}
+
+
+/* carte*/
+#cards h3 {
+    color: var(--couleur-ecriture1);
+}
+.grilleCards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex-basis: 30%;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.card:hover {
+    
+    transition: all 0.4s ease 0s;
+}
+
+.card img {
+    max-width: 90%;
+}
+
+/*services*/
+
+.grilleServices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 15%;
+}
+
+.service {
+    flex-basis: 35%;
+    flex-shrink: 1;
+    margin: 10px;
+    height : 300px;
+}
+
+.service-description  {
+    background-color: var(--couleur-fond2);
+    text-align: center;
+}
+
+.service img {
+    object-fit: cover;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+/*contacts*/
+
+#contacts{
+    color: var(--couleur-ecriture1);
+}
+.grilleContacts{
+    display:flex;
+    flex-wrap: wrap;
+    padding : 5%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.full-adress{
+    display: flex;
+    justify-items: space-between;
+}
+
+.address{
+    align-items:center;
+    display: flex;
+    flex-direction: row;
+}
+
+.address i {
+    color: #91BFDC;
+    flex-basis: 20%;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+/*footer*/
+footer {
+    text-align: center;
+    padding: 5%;
+}
+
+footer a {
+    color: black;
+}
+footer iframe{
+    width : 70%; 
+}
+
+
+/*vue mobile*/
+@media (max-width:767px) {
+    header{height: auto;}
+    .service {
+        flex-basis: 40%;
+        flex-shrink: 1;
+        margin: 10px;
+        height : 150px;
+        width : 150px;
+    }
+
+    
+
+   
+}
+
+
+/*vue tablette*/
+@media (min-width:768px) and (max-width:1199px) {
+    .service {
+        flex-basis: 40%;
+        flex-shrink: 1;
+        margin: 10px;
+        height : 150px;
+        width : 150px;
+    }
+    .full-adress, .map {
+        flex-basis: 50%;
+    }
+}
