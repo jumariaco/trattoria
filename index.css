@@ -1,6 +1,6 @@
 :root {
-    --couleur-fond1: #bc2020;
-    --couleur-fond2: #6b0202;
+    --couleur-fond1: #8a241d;
+    --couleur-fond2: #701610;
     --couleur-ecriture1: #4c9346;
     --couleur-ecriture2: rgb(248, 252, 250);
 }
@@ -58,6 +58,8 @@ h3, h1 {
 section{
     padding-top: 1%;
     padding-bottom: 1%;
+    min-height: 93vh;
+    align-items: center;
 }
 
 /*barre de navigation*/
@@ -91,23 +93,29 @@ nav {
 
 /*header*/
 header {
-    width: 100%;
+    min-height: 93vh;
     margin-top: 80px;
+    background-image: url(./images/pizza.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     color : var(--couleur-ecriture2);
     display : flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-header img {
-    object-fit: cover;
-    height: 50vh;
-    width : 100vw;
-}
-
-h1{
-    position: absolute;
+@keyframes colorchange {
+    0% {color : var(--couleur-ecriture1);}
+    50%{color: var(--couleur-fond2);}
+    100%{color:var(--couleur-ecriture2);}
     
 }
 
+h1:hover{
+    animation: colorchange 4s ease-in-out 0s reverse;
+}
 
 /* carte*/
 #cards h3 {
